@@ -38,7 +38,7 @@
 		geometry.applyMatrix(new THREE.Matrix4().makeScale(-1, 1, 1));
 
 		material = new THREE.MeshBasicMaterial({
-			map: THREE.ImageUtils.loadTexture('R0010001_20160613153433.JPG')
+			map: THREE.ImageUtils.loadTexture('example.png')
 		});
 
 		mesh = new THREE.Mesh(geometry, material);
