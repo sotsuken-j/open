@@ -54,6 +54,7 @@
 		if( (navigator.userAgent.indexOf('Windows') > 0) || (navigator.userAgent.indexOf('Mac') > 0) ) {
 			//controls = new THREE.DeviceOrientationControls(camera);
 			controls = new THREE.OrbitControls(camera);
+			controls.enableZoom = false;
 		}else{
 			//controls = new THREE.OrbitControls(camera);
 			controls = new THREE.DeviceOrientationControls(camera);
