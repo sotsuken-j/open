@@ -51,13 +51,11 @@
 
 		//
 		
-		if( (navigator.userAgent.indexOf('Windows') > 0) || (navigator.userAgent.indexOf('Mac') > 0) ) {
-			//controls = new THREE.DeviceOrientationControls(camera);
+		if( (navigator.userAgent.indexOf('Android') > 0) || (navigator.userAgent.indexOf('iPhone') > 0) ) {
+			controls = new THREE.DeviceOrientationControls(camera);
+		}else{
 			controls = new THREE.OrbitControls(camera);
 			controls.enableZoom = false;
-		}else{
-			//controls = new THREE.OrbitControls(camera);
-			controls = new THREE.DeviceOrientationControls(camera);
 		}
 		
 		
@@ -104,7 +102,9 @@
 				camera.position.y = - camera.target.y;
 				camera.position.z = - camera.target.z;
 				*/
-		//controls.update();
+		if( (navigator.userAgent.indexOf('Android') > 0) || (navigator.userAgent.indexOf('iPhone') > 0) ) {
+			controls.update();
+		}
 		//renderer.render(scene, camera);
 		effect.render(scene, camera);
 	}
