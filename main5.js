@@ -135,7 +135,7 @@
 		var file = e.dataTransfer.files[0];
 
 		if (!file.type.match('image.*')) {
-			alert('imageファイルにしてね');
+			alert('画像ファイルのみ適用できます。');
 			cancelEvent(e);
 		}
 
